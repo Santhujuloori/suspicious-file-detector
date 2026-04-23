@@ -47,7 +47,7 @@ if uploaded_file is not None:
         st.success("✅ File looks safe (basic check)")
 
     # 🔥 VirusTotal check (move here)
-    api_key = "49151c8c3c656707be0a7c90cf8ac22656e703521f3d2f7263b48699d717f1ec"
+    api_key = st.secrets["VIRUSTOTAL_API_KEY"]
 
     def check_virustotal(file_hash, api_key):
         url = f"https://www.virustotal.com/api/v3/files/{file_hash}"
